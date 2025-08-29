@@ -1,6 +1,6 @@
 ## Image-to-Ascii
 
-### A simple, 60 LOC script that converts an image (PNG, WebP, JPEG) to ascii characters
+### A simple, 50 LOC script that converts an image (PNG, WebP, JPEG) to ascii characters
 
 - Pre-requisites:
     - Node.js (or Bun)
