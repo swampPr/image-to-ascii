@@ -10,6 +10,8 @@ To use this script, just clone this repo:
 git clone git@github.com:swampPr/image-to-ascii.git
 
 cd image-to-ascii
+
+npm install
 ```
 
 To use the script you must provide a path to the image you want to run followed by a scale of how big or small you want the image to be. 
@@ -31,7 +33,7 @@ Then you would run the command like this:
 node index.js images/img.png
 ```
 
-Example:
+Example(JavaScript Logo Scale 11) :
 
 ```txt
 {?????????????????????????????????????????????????
@@ -84,7 +86,4 @@ Example:
 ~l!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ~l!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ~l!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
-
 ```
-JavaScript Logo (Scale 11)

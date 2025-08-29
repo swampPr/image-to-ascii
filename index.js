@@ -14,15 +14,10 @@ const readFile = fs.readFileSync(filePath);
 const image = new Uint8Array(readFile);
 const imgInfo = await sharp(image).metadata();
 
-const desiredHeight = Math.ceil(imgInfo.height / 6);
-const desiredWidth = Math.ceil(imgInfo.width / 6);
+const desiredHeight = Math.round(imgInfo.height / 6);
+const desiredWidth = Math.round(imgInfo.width / 6);
 
-const { data, info } = await sharp(image)
-    .resize(desiredWidth, desiredHeight)
-    .removeAlpha()
-    .toColorspace('srgb')
-    .raw()
-    .toBuffer({ resolveWithObject: true });
+const { data, info } = await sharp(image).resize(desiredWidth, desiredHeight).removeAlpha().toColorspace('srgb').raw().toBuffer({ resolveWithObject: true });
 const arrayImg = new Uint8Array(data);
 
 const pixelMap = [];
@@ -33,9 +28,7 @@ function grayToAscii(grayScale) {
 }
 
 for (let index = 0; index < arrayImg.length; index = index + 3) {
-    const grayScale = Math.round(
-        arrayImg[index] * 0.2126 + arrayImg[index + 1] * 0.7152 + arrayImg[index + 2] * 0.0722
-    );
+    const grayScale = Math.round(arrayImg[index] * 0.2126 + arrayImg[index + 1] * 0.7152 + arrayImg[index + 2] * 0.0722);
 
     pixelMap.push(grayScale);
 }
