@@ -14,8 +14,8 @@ const readFile = fs.readFileSync(filePath);
 const image = new Uint8Array(readFile);
 const imgInfo = await sharp(image).metadata();
 
-const desiredHeight = Math.round(imgInfo.height / 6);
-const desiredWidth = Math.round(imgInfo.width / 6);
+const desiredHeight = Math.round(imgInfo.height / scale);
+const desiredWidth = Math.round(imgInfo.width / scale);
 
 const { data, info } = await sharp(image).resize(desiredWidth, desiredHeight).removeAlpha().toColorspace('srgb').raw().toBuffer({ resolveWithObject: true });
 const arrayImg = new Uint8Array(data);
