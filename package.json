@@ -1,0 +1,23 @@
+{
+  "name": "image-to-ascii",
+  "version": "1.0.0",
+  "description": "A simple, 60 LOC script that converts an image (PNG, WebP, JPEG) to ascii characters",
+  "homepage": "https://github.com/swampPr/image-to-ascii#readme",
+  "bugs": {
+    "url": "https://github.com/swampPr/image-to-ascii/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/swampPr/image-to-ascii.git"
+  },
+  "license": "ISC",
+  "author": "swampPr",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "sharp": "^0.34.3"
+  }
+}
