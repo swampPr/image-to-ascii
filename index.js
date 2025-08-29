@@ -4,10 +4,10 @@ import sharp from 'sharp';
 import { homedir } from 'os';
 
 const file = process.argv[2];
-if (typeof file !== 'string') throw new Error('Please input a valid path');
+if (!file) throw new Error('Please input a valid path');
 
 const scale = Number(process.argv[3]);
-if (typeof scale !== 'number') throw new Error('Please input a valid scale');
+if (!scale) throw new Error('Please input a valid scale');
 
 const filePath = path.resolve(homedir(), file);
 const readFile = fs.readFileSync(filePath);
